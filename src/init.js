@@ -32,6 +32,7 @@ $(document).ready(function() {
     if (dancer instanceof MakeBreakDancer) {
       $(dancer.$node).addClass("break");
     }
+
     $('body').append(dancer.$node);
   });
 });
