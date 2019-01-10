@@ -5,7 +5,7 @@ describe('blinkyDancer', function() {
 
   beforeEach(function() {
     clock = sinon.useFakeTimers();
-    blinkyDancer = new makeBlinkyDancer(10, 20, timeBetweenSteps);
+    blinkyDancer = new MakeBlinkyDancer(10, 20, timeBetweenSteps);
   });
 
   it('should have a jQuery $node object', function() {
@@ -41,7 +41,7 @@ describe('breakDancer', function() {
 
   beforeEach(function() {
     clock = sinon.useFakeTimers();
-    breakDancer = new makeBreakDancer(20, 30, timeBetweenSteps);
+    breakDancer = new MakeBreakDancer(20, 30, timeBetweenSteps);
   });
 
   it('should have a jQuery $node object', function() {
@@ -77,7 +77,7 @@ describe('pulpDancer', function() {
 
   beforeEach(function() {
     clock = sinon.useFakeTimers();
-    pulpDancer = new makepulpDancer(10, 20, timeBetweenSteps);
+    pulpDancer = new MakePulpDancer(10, 20, timeBetweenSteps);
   });
 
   it('should have a jQuery $node object', function() {
