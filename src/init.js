@@ -26,7 +26,13 @@ $(document).ready(function() {
       $("body").height() * Math.random(),
       $("body").width() * Math.random(),
       Math.random() * 1000);
+    if (dancer instanceof MakePulpDancer) {
+      $(dancer.$node).addClass("pulp");
+    }
+    if (dancer instanceof MakeBreakDancer) {
+      $(dancer.$node).addClass("break");
+    }
     $('body').append(dancer.$node);
   });
-});                               
+});
 
