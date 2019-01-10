@@ -26,6 +26,7 @@ $(document).ready(function() {
       $("body").height() * Math.random(),
       $("body").width() * Math.random(),
       Math.random() * 1000);
+    window.dancers.push(dancer);
     if (dancer instanceof MakePulpDancer) {
       $(dancer.$node).addClass("pulp");
     }
@@ -34,6 +35,11 @@ $(document).ready(function() {
     }
 
     $('body').append(dancer.$node);
+  });
+  $('.lineUp').on('click', function(event) {
+    var lineUpFunctionName = $(this).data('line-up');
+    var lineUpFunction = window[lineUpFunctionName];
+    lineUpFunction();
   });
 });
 
