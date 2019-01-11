@@ -1,5 +1,6 @@
 $(document).ready(function() {
   window.dancers = [];
+  
 
   $('.addDancerButton').on('click', function(event) {
     /* This function sets up the click handlers for the create-dancer
@@ -43,7 +44,15 @@ $(document).ready(function() {
     }
 
     $('body').append(dancer.$node);
+    
+    $(".dancer").mouseover( function() {
+      $(this).remove();
+    });
   });
+  
+  
+  
+  
   $('.lineUp').on('click', function(event) {
     var lineUpFunctionName = $(this).data('line-up');
     var lineUpFunction = window[lineUpFunctionName];
