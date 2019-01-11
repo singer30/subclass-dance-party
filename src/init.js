@@ -21,8 +21,6 @@ $(document).ready(function() {
     // get the maker function for the kind of dancer we're supposed to make
     var dancerMakerFunction = window[dancerMakerFunctionName];
 
-    // make a dancer with a random position
-    // var topP = window.screen.availHeight * Math.random();
     var topP = window.innerHeight * Math.random();
     if (topP > (window.innerHeight - 100)) {
       topP = window.innerHeight - 150;
@@ -62,6 +60,9 @@ $(document).ready(function() {
       setTimeout(blow.bind(this), 500);
       
     });
+    
+    setInterval(range, 1000);
+    
   });
   
   $('.lineUp').on('click', function(event) {
