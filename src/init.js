@@ -46,7 +46,19 @@ $(document).ready(function() {
     $('body').append(dancer.$node);
     
     $(".dancer").mouseover( function() {
-      $(this).remove();
+      console.log('here')
+      var thisLeft = parseFloat($(this).css("left").slice(0, -2));
+      var thisTop = parseFloat($(this).css("top").slice(0, -2));
+      console.log(thisLeft)
+      console.log(thisTop)
+        $("img").attr("src", "BackGround/smoke.gif");
+        //$('body').append(smoke.$node);
+        var blow = function() {
+          $(this).remove();
+        };
+      setTimeout(blow.bind(this), 500);
+      //
+      
     });
   });
   
