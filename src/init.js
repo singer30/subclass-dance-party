@@ -30,10 +30,16 @@ $(document).ready(function() {
     
     if (dancer instanceof MakePulpDancer) {
       $(dancer.$node).addClass("pulp");
-      
+      $(dancer.$node).append('<img src="Dancers/Bender.gif" height="70" width="50"></img>');
+      dancer.event = setInterval(dancer.move.bind(dancer), Math.random() * 1000);
     }
     if (dancer instanceof MakeBreakDancer) {
       $(dancer.$node).addClass("break");
+      $(dancer.$node).append('<img src="Dancers/PeterGriffen.png" height="70" width="50"></img>');
+    }
+    if (dancer instanceof MakeBlinkyDancer) {
+      $(dancer.$node).addClass("blinky");
+      $(dancer.$node).append('<img src="Dancers/PBJT.png" height="70" width="50"></img>');
     }
 
     $('body').append(dancer.$node);
