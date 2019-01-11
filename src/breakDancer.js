@@ -23,5 +23,4 @@ MakeBreakDancer.prototype.step = function(timeBetweenSteps) {
       });
   }
   MakeDancer.prototype.step.call(this, timeBetweenSteps);
-  //this.$node.toggle();
 };

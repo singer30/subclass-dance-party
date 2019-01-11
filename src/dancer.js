@@ -22,11 +22,6 @@ MakeDancer.prototype.move = function() {
   if (thisLeft > window.innerWidth) {
     thisLeft = thisLeft - window.innerWidth;
   }
-  // console.log(thisLeft);
-  // console.log(thisTop);
-  
   $(this.$node).css("left", thisLeft);
-  
-  //$(window.dancers[i].$node).css('left', parseFloat((window.dancers[i].$node).css("width").slice(0, -2))/2);
 };
 

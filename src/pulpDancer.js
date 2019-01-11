@@ -12,6 +12,5 @@ MakePulpDancer.prototype.step = function(timeBetweenSteps) {
   } else {
     this.size = 0;
   }
-  // this.move();
   $(this.$node).css("border-width", `${this.size}px`)
 };
