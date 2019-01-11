@@ -22,10 +22,17 @@ $(document).ready(function() {
     var dancerMakerFunction = window[dancerMakerFunctionName];
 
     // make a dancer with a random position
+    // var topP = window.screen.availHeight * Math.random();
+    var topP = window.innerHeight * Math.random();
+    if (topP > (window.innerHeight - 100)) {
+      topP = window.innerHeight - 150;
+    } else if (topP < 70) {
+      topP = 70;
+    }
 
     var dancer = new dancerMakerFunction(
-      $("body").height() * Math.random(),
-      $("body").width() * Math.random(),
+      topP,
+      window.innerWidth * Math.random(),
       Math.random() * 1000);
     window.dancers.push(dancer);
     
@@ -46,7 +53,6 @@ $(document).ready(function() {
     $('body').append(dancer.$node);
     
     $(".dancer, img").mouseover( function() {
-      console.log('here')
       var thisLeft = parseFloat($(this).css("left").slice(0, -2));
       var thisTop = parseFloat($(this).css("top").slice(0, -2));
       $(this).attr("src", "BackGround/smoke.gif");
