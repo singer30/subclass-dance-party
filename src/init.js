@@ -30,6 +30,7 @@ $(document).ready(function() {
     
     if (dancer instanceof MakePulpDancer) {
       $(dancer.$node).addClass("pulp");
+      
     }
     if (dancer instanceof MakeBreakDancer) {
       $(dancer.$node).addClass("break");

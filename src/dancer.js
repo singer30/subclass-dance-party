@@ -16,3 +16,17 @@ MakeDancer.prototype.setPosition = function(top, left) {
   this.$node.css(styleSettings);
 };
 
+MakeDancer.prototype.move = function() {
+  var thisLeft = parseFloat($(this.$node).css("left").slice(0, -2)) + 100;
+  var thisTop = parseFloat($(this.$node).css("top").slice(0, -2)) + 100;
+  if (thisLeft > window.innerWidth) {
+    thisLeft = thisLeft - window.innerWidth;
+  }
+  console.log(thisLeft);
+  console.log(thisTop);
+  
+  $(this.$node).css("left", thisLeft);
+  
+  //$(window.dancers[i].$node).css('left', parseFloat((window.dancers[i].$node).css("width").slice(0, -2))/2);
+};
+
