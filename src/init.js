@@ -1,6 +1,6 @@
 $(document).ready(function() {
   window.dancers = [];
-  
+
 
   $('.addDancerButton').on('click', function(event) {
     /* This function sets up the click handlers for the create-dancer
@@ -33,7 +33,7 @@ $(document).ready(function() {
       window.innerWidth * Math.random(),
       Math.random() * 1000);
     window.dancers.push(dancer);
-    
+
     if (dancer instanceof MakePulpDancer) {
       $(dancer.$node).addClass("pulp");
       $(dancer.$node).append('<img src="Dancers/Bender.gif" height="70" width="50"></img>');
@@ -49,22 +49,21 @@ $(document).ready(function() {
     }
 
     $('body').append(dancer.$node);
-    
-    $(".dancer, img").mouseover( function() {
+
+    $(".dancer").mouseover( function() {
       var thisLeft = parseFloat($(this).css("left").slice(0, -2));
       var thisTop = parseFloat($(this).css("top").slice(0, -2));
-      $(this).attr("src", "BackGround/smoke.gif");
+      $(this).children("img").attr("src", "BackGround/smoke.gif");
       var blow = function() {
         $(this).remove();
       };
       setTimeout(blow.bind(this), 500);
-      
     });
-    
+
     setInterval(range, 1000);
-    
+
   });
-  
+
   $('.lineUp').on('click', function(event) {
     var lineUpFunctionName = $(this).data('line-up');
     var lineUpFunction = window[lineUpFunctionName];
